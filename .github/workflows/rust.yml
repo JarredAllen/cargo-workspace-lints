@@ -1,4 +1,4 @@
-name: Rust
+name: Build and Test
 
 on:
   push:
@@ -9,13 +9,24 @@ on:
 env:
   CARGO_TERM_COLOR: always
 
+permissions:
+  checks: write
+
 jobs:
-  build:
+  build-and-test:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+      with:
+        components: clippy
+    - uses: Swatinem/rust-cache@v2
+    - uses: auguwu/clippy-action@1.4.0
+      with:
+        args: "--deny warnings"
+        token: ${{secrets.GITHUB_TOKEN}}
     - name: Build
       run: cargo build --verbose
     - name: Run tests
