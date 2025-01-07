@@ -1,0 +1,5 @@
+[workspace]
+members = ["test-crate"]
+
+[workspace.lints.rustc]
+missing-docs = "deny"
