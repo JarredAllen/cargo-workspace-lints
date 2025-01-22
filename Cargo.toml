@@ -2,7 +2,7 @@
 name = "cargo-workspace-lints"
 authors = ["Jarred Allen <jarredallen73@gmail.com"]
 description = "Enforce that all packages in a workspace are using workspace lints"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 repository = "https://github.com/JarredAllen/cargo-workspace-lints"
 license = "MIT"
