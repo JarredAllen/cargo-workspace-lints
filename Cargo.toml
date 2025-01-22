@@ -21,3 +21,8 @@ unsafe-code = "forbid"
 [lints.clippy]
 cargo = "warn"
 pedantic = "warn"
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
