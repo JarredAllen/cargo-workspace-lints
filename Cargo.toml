@@ -19,8 +19,9 @@ toml = { version = "0.8.8" }
 unsafe-code = "forbid"
 
 [lints.clippy]
-cargo = "warn"
-pedantic = "warn"
+cargo = { level = "warn", priority = -1 }
+multiple_crate_versions = "allow"
+pedantic = { level = "warn", priority = -1 }
 
 [profile.release]
 codegen-units = 1
