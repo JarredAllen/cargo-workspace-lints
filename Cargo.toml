@@ -11,9 +11,9 @@ keywords = ["cargo", "workspace", "lint", "diagnostics"]
 readme = "./README.md"
 
 [dependencies]
-cargo_metadata = "0.20.0"
+cargo_metadata = "0.22.0"
 clap = { version = "4.4.11", features = ["derive"] }
-toml = { version = "0.8.8" }
+toml = { version = "0.9.5" }
 
 [lints.rust]
 unsafe-code = "forbid"
