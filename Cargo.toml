@@ -2,7 +2,7 @@
 name = "cargo-workspace-lints"
 authors = ["Jarred Allen <jarredallen73@gmail.com"]
 description = "Enforce that all packages in a workspace are using workspace lints"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 repository = "https://github.com/JarredAllen/cargo-workspace-lints"
 license = "MIT"
@@ -11,12 +11,12 @@ keywords = ["cargo", "workspace", "lint", "diagnostics"]
 readme = "./README.md"
 
 [dependencies]
-cargo_metadata = "0.22.0"
-clap = { version = "4.4.11", features = ["derive"] }
-toml = { version = "0.9.5" }
+cargo_metadata = "0.23"
+clap = { version = "4.6", features = ["derive"] }
+toml = { version = "1.0" }
 
 [lints.rust]
-unsafe-code = "forbid"
+unsafe_code = "forbid"
 
 [lints.clippy]
 cargo = { level = "warn", priority = -1 }

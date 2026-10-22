@@ -28,6 +28,6 @@ jobs:
         args: "--deny warnings"
         token: ${{secrets.GITHUB_TOKEN}}
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --locked --verbose
     - name: Run tests
-      run: cargo test --verbose
+      run: cargo test --locked --verbose
